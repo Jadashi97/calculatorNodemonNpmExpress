@@ -1,0 +1,14 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "building a calculator that is not only on the browser but it involves the server as well",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nyarji Jada",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
