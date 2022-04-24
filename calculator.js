@@ -31,12 +31,28 @@ app.post("/", function(req, res){
     res.send(`The result of the calculation is ${result}`);
 });
 
+//these are the get and post methods added to the our server to make sure the BMI calculator does its job
+
+app.get("/bmicalculator", function(req, res){
+  res.sendFile(__dirname + "/bmiCalculator.html");
+});
+
+app.post("/bmicalculator", function(req, res){
+    var weight = parseFloat(req.body.weight);
+    var height = parseFloat(req.body.height);
+
+    var n = weight/ (height * height);
+
+    res.send(`Your BMI is ${n}`);
+
+});
 
 
-// // just me goofing around and testing if this works
-// app.get("/wazzaa", function(req, res){
-//     res.send("yoooooo. look at these booooomers")
-// });
+
+// just me goofing around and testing if this works
+app.get("/wazzaa", function(req, res){
+    res.send("yoooooo. look at these booooomers")
+});
 
 // this listens to that port to show any that our server is running on that port 
 
